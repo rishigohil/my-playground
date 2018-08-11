@@ -48,5 +48,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Playground.Contracts\Playground.Contracts.csproj">
+      <Project>{15e8cb71-84d3-4f04-b50d-ddcb057c8327}</Project>
+      <Name>Playground.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Playground.Library\Playground.Library.csproj">
+      <Project>{8b64ba2b-8d48-40dd-aea9-75efbf842ef2}</Project>
+      <Name>Playground.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Playground.Problems\Playground.Problems.csproj">
+      <Project>{ab796d0a-a0eb-44b7-aff9-68e3e54e2d22}</Project>
+      <Name>Playground.Problems</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,17 +1,28 @@
+using Playground.Contracts;
+using Playground.Library.Core;
+using Playground.Problems.Util;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace playground_app
+namespace Playground.App
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            var implementingClasses = CoreHelper.GetImplementors(typeof(IProblem));
+
+            foreach (var item in implementingClasses)
+            {
+                Console.WriteLine($"// Executing: { item.Name.ToString() }");
+                Console.WriteLine("// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----");
+
+                Helper.InvokeMethod(item, "Run");
+                Helper.InsertNewLines(1);
+            }
+            
+            Helper.InsertNewLines(2);
+            Console.WriteLine("Press any key to quit...");
+            Console.ReadLine();
         }
     }
 }
