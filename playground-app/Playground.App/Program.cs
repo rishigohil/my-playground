@@ -13,6 +13,7 @@ namespace Playground.App
 
             foreach (var item in implementingClasses)
             {
+                Helper.InsertNewLines();
                 Console.WriteLine($"// Executing: { item.Name.ToString() }");
                 Console.WriteLine("// ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----");
 

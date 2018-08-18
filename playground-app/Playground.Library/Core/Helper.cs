@@ -34,7 +34,7 @@ namespace Playground.Library.Core
                 outputStr += Environment.NewLine;
             }
 
-            Console.WriteLine(outputStr);
+            Console.Write(outputStr);
         }
 
         
