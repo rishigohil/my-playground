@@ -12,8 +12,6 @@ namespace Playground.Library.Core
     {
         #region System Methods
 
-       
-
         public static void InvokeMethod(Type type, string methodName)
         {
             object instance = Activator.CreateInstance(type);
@@ -36,7 +34,5 @@ namespace Playground.Library.Core
 
             Console.Write(outputStr);
         }
-
-        
     }
 }
