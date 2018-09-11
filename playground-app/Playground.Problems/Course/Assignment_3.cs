@@ -35,10 +35,5 @@ namespace Playground.Problems.Course
             input.Remove(2);
             Console.WriteLine($"Updated Size: {input.Length}");
         }
-
-        private void FlattenLinkedList()
-        {
-
-        }
     }
 }
