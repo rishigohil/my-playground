@@ -1,4 +1,5 @@
 ﻿using Playground.Contracts;
+using Playground.Library.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,19 @@ namespace Playground.Problems.Course
     {
         public void Run()
         {
+            #region Find top K elements
+
+            Console.WriteLine("//Find top K elements...");
             var input = new int[] { 5, 1, 2, 9, 1 };
             var k = 3;
 
+            Console.WriteLine($"Input: {string.Join(",", input)} | K = {k}");
+
             var result = FindTopKElements(input, k);
+
+            Console.WriteLine($"Top K ({k}) elements: {result}");
+
+            #endregion
         }
 
         /// <summary>
@@ -43,5 +53,7 @@ namespace Playground.Problems.Course
 
             return res;
         }
+
+        
     }
 }
